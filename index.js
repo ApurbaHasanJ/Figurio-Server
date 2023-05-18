@@ -30,6 +30,7 @@ async function run() {
 
     const bannersCollection = client.db('Figurio').collection('banners')
     const galleriesCollection = client.db('Figurio').collection('gallery')
+    const shopByCategoryCollection = client.db('Figurio').collection('shopByCategory')
 
 // get banners for homepage
     app.get('/banners', async(req, res) => {
@@ -42,6 +43,13 @@ async function run() {
     // get galleries
     app.get('/galleries',async(req, res) => {
       const cursor = galleriesCollection.find()
+      const result = await cursor.toArray()
+      res.send(result)
+    })
+
+    // get short by categories data
+    app.get('/categories', async(req, res) => {
+      const cursor = shopByCategoryCollection.find()
       const result = await cursor.toArray()
       res.send(result)
     })

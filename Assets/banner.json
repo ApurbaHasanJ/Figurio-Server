@@ -1,40 +1,98 @@
-{
-  "characters": [
-    {
-      "franchise": "Marvel",
-      "name": "Iron Man",
-      "description": "Tony Stark, a genius inventor, dons his high-tech armor to become the superhero Iron Man.",
-      "img": "https://i.postimg.cc/rmVTjV23/ironman.jpg"
-    },
-    {
-      "franchise": "Marvel",
-      "name": "Captain America",
-      "description": "Steve Rogers, a super-soldier with enhanced strength and agility, fights for justice as Captain America.",
-      "img": "https://i.postimg.cc/YCxMWGJY/captain.jpg"
-    },
-    {
-      "franchise": "Star Wars",
-      "name": "Darth Vader",
-      "description": "Anakin Skywalker, once a Jedi Knight, falls to the dark side and becomes the iconic Sith Lord, Darth Vader.",
-      "img": "https://i.postimg.cc/L8Yr3qYn/darth.jpg"
-    },
-    {
-      "franchise": "Star Wars",
-      "name": "Yoda",
-      "description": "Yoda, a wise and powerful Jedi Master, trains young Jedi and wields his lightsaber with unmatched skill.",
-      "img": "https://i.postimg.cc/y8ppt7R2/yoda.jpg"
-    },
-    {
-      "franchise": "Transformers",
-      "name": "Optimus Prime",
-      "description": "Optimus Prime, the noble leader of the Autobots, transforms into a powerful truck and defends Earth against the Decepticons.",
-      "img": "https://i.postimg.cc/pTFSK3p4/optimus.jpg"
-    },
-    {
-      "franchise": "Transformers",
-      "name": "Bumblebee",
-      "description": "Bumblebee, a brave Autobot scout, takes the form of a yellow sports car and befriends humans in the battle against evil.",
-      "img": "https://i.postimg.cc/7YgBHg21/Bumblebeee.jpg"
-    }
-  ]
-}
+[
+  {
+    "name": "Avengers",
+    "toys": [
+      {
+        "_id": "aa11",
+        "name": "Iron Man",
+        "image": "https://i.postimg.cc/8573db1J/irontoy.jpg",
+        "price": "$29.99",
+        "rating": 4.5,
+        "description": "Bring the heroic Tony Stark to life with this highly detailed Iron Man action figure. Perfect for fans of the Avengers franchise.",
+        "inStock": true
+      },
+      {
+        "_id": "aa22",
+        "name": "Captain America",
+        "image": "https://i.postimg.cc/d0rwRv4c/captoy.jpg",
+        "price": "$24.99",
+        "rating": 4.3,
+        "description": "Join the fight for justice with this Captain America action figure. Stand up against evil and defend the innocent.",
+        "inStock": true
+      },
+      {
+        "_id": "bb33",
+        "name": "Spider-Man",
+        "image": "https://i.postimg.cc/YCDHXrPG/spidertoy.jpg",
+        "price": "$19.99",
+        "rating": 4.5,
+        "description": "Swing into action with this Spider-Man action figure. With his web-slinging abilities and keen senses, Spider-Man fights crime and protects the city from villains.",
+        "inStock": true
+        }
+    ]
+  },
+  {
+    "name": "Star Wars",
+    "toys": [
+      {
+        "_id": "aa33",
+        "name": "Darth Vader",
+        "image": "https://i.postimg.cc/cJ928zNG/dathtoyy.jpg",
+        "price": "$34.99",
+        "rating": 4.7,
+        "description": "Embrace the dark side with this Darth Vader action figure. Rule the galaxy with the power of the Sith.",
+        "inStock": true
+      },
+      {
+        "_id": "aa44",
+        "name": "Yoda",
+        "image": "https://i.postimg.cc/x8bR8x95/yodaatoy.jpg",
+        "price": "$22.99",
+        "rating": 4.2,
+        "description": "Discover the wisdom of Yoda with this detailed action figure. May the Force be with you.",
+        "inStock": true
+      },
+      {
+        "_id": "bb55",
+        "name": "Stormtroopers",
+        "image": "https://i.postimg.cc/g0q1k0gj/startoy.jpg",
+        "price": "$29.99",
+        "rating": 4.0,
+        "description": "Join the Imperial forces with these Stormtrooper action figures. Equipped with their iconic white armor, they are the backbone of the Galactic Empire's military.",
+        "inStock": true
+        }
+    ]
+  },
+  {
+    "name": "Transformers",
+    "toys": [
+      {
+        "_id": "aa55",
+        "name": "Optimus Prime",
+        "image": "https://i.postimg.cc/ZKd75RRm/optitoy.jpg",
+        "price": "$39.99",
+        "rating": 4.6,
+        "description": "Lead the Autobots into battle with this Optimus Prime action figure. Protect Earth from the Decepticons.",
+        "inStock": true
+      },
+      {
+        "_id": "aa66",
+        "name": "Bumblebee",
+        "image": "https://i.postimg.cc/qBCSzQbW/barbeetoyy.jpg",
+        "price": "$27.99",
+        "rating": 4.1,
+        "description": "Join the courageous Bumblebee on exciting adventures with this action figure. Defeat the evil Decepticons.",
+        "inStock": true
+      },
+      {
+        "_id": "bb77",
+        "name": "Megatron",
+        "image": "https://i.postimg.cc/FFjb47NS/megatrontooy.jpg",
+        "price": "$39.99",
+        "rating": 4.4,
+        "description": "Unleash the power of Megatron with this action figure. As the ruthless leader of the Decepticons, he seeks to conquer and dominate the universe, opposing Optimus Prime and the Autobots.",
+        "inStock": true
+        }
+    ]
+  }
+]
