@@ -29,14 +29,23 @@ async function run() {
     // Send a ping to confirm a successful connection
 
     const bannersCollection = client.db('Figurio').collection('banners')
+    const galleriesCollection = client.db('Figurio').collection('gallery')
 
-
+// get banners for homepage
     app.get('/banners', async(req, res) => {
       const cursor = bannersCollection.find()
       const result = await cursor.toArray()
       // console.log(result);
       res.send(result)
     })
+
+    // get galleries
+    app.get('/galleries',async(req, res) => {
+      const cursor = galleriesCollection.find()
+      const result = await cursor.toArray()
+      res.send(result)
+    })
+
 
 
 

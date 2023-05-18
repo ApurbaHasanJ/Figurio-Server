@@ -1,22 +1,40 @@
-[
-  {
-    "title": "Star Wars",
-    "description": "A popular sci-fi franchise set in a galaxy far, far away. Includes movies, TV series, books, and merchandise.",
-    "img": "https://i.postimg.cc/mr7F5bFS/starwar.jpg"
-  },
-  {
-    "title": "Avengers",
-    "description": "A superhero team from Marvel Comics, consisting of iconic characters like Iron Man, Captain America, Thor, Hulk, Black Widow, and Hawkeye. They protect the world from threats.",
-    "img": "https://i.postimg.cc/28JbjqQw/thor.jpg"
-  },
-  {
-    "title": "DC",
-    "description": "DC Comics is a publisher known for iconic superheroes like Superman, Batman, Wonder Woman, and the Flash. The DC Universe features a wide range of characters, villains, and epic storylines.",
-    "img": "https://i.postimg.cc/ZqMZh3tP/batman.jpg"
-  },
-  {
-    "title": "Transformers",
-    "description": "A franchise featuring sentient robots that can transform into vehicles, weapons, or animals. Transformers are divided into Autobots and Decepticons, and their battles often take place on Earth.",
-    "img": "https://i.postimg.cc/G90CV1Dk/transformer.jpg"
-  }
-]
+{
+  "characters": [
+    {
+      "franchise": "Marvel",
+      "name": "Iron Man",
+      "description": "Tony Stark, a genius inventor, dons his high-tech armor to become the superhero Iron Man.",
+      "img": "https://i.postimg.cc/rmVTjV23/ironman.jpg"
+    },
+    {
+      "franchise": "Marvel",
+      "name": "Captain America",
+      "description": "Steve Rogers, a super-soldier with enhanced strength and agility, fights for justice as Captain America.",
+      "img": "https://i.postimg.cc/YCxMWGJY/captain.jpg"
+    },
+    {
+      "franchise": "Star Wars",
+      "name": "Darth Vader",
+      "description": "Anakin Skywalker, once a Jedi Knight, falls to the dark side and becomes the iconic Sith Lord, Darth Vader.",
+      "img": "https://i.postimg.cc/L8Yr3qYn/darth.jpg"
+    },
+    {
+      "franchise": "Star Wars",
+      "name": "Yoda",
+      "description": "Yoda, a wise and powerful Jedi Master, trains young Jedi and wields his lightsaber with unmatched skill.",
+      "img": "https://i.postimg.cc/y8ppt7R2/yoda.jpg"
+    },
+    {
+      "franchise": "Transformers",
+      "name": "Optimus Prime",
+      "description": "Optimus Prime, the noble leader of the Autobots, transforms into a powerful truck and defends Earth against the Decepticons.",
+      "img": "https://i.postimg.cc/pTFSK3p4/optimus.jpg"
+    },
+    {
+      "franchise": "Transformers",
+      "name": "Bumblebee",
+      "description": "Bumblebee, a brave Autobot scout, takes the form of a yellow sports car and befriends humans in the battle against evil.",
+      "img": "https://i.postimg.cc/7YgBHg21/Bumblebeee.jpg"
+    }
+  ]
+}
