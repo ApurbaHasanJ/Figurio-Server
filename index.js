@@ -62,6 +62,48 @@ async function run() {
       res.send(result);
     });
 
+     // get specific toy details
+     app.get("/categories/:categoryId/toys", async (req, res) => {
+      const categoryId = req.params.categoryId;
+
+      try {
+        const query = { _id: new ObjectId(categoryId) };
+        const category = await shopByCategoryCollection.findOne(query);
+
+        if (category) {
+          res.send(category.toys);
+        } else {
+          res.status(404).send({ message: "Category not found" });
+        }
+      } catch (error) {
+        res.status(500).send({ message: "Internal server error" });
+      }
+    });
+
+    // url for specific toy
+    app.get("/categories/:categoryId/toys/:toyId", async (req, res) => {
+      const categoryId = req.params.categoryId;
+      const toyId = req.params.toyId;
+
+      try {
+        const query = { _id: new ObjectId(categoryId) };
+        const category = await shopByCategoryCollection.findOne(query);
+
+        if (category) {
+          const toy = category.toys.find((toy) => toy._id === toyId);
+
+          if (toy) {
+            res.send(toy);
+          } else {
+            res.status(404).send({ message: "Toy not found" });
+          }
+        } else {
+          res.status(404).send({ message: "Category not found" });
+        }
+      } catch (error) {
+        res.status(500).send({ message: "Internal server error" });
+      }
+    });
    
 
     await client.db("admin").command({ ping: 1 });
