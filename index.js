@@ -31,6 +31,7 @@ async function run() {
     const shopByCategoryCollection = client
       .db("Figurio")
       .collection("shopByCategory");
+      const allToysCollection = client.db("Figurio").collection('allToys');
 
     // get banners for homepage
     app.get("/banners", async (req, res) => {
@@ -104,6 +105,15 @@ async function run() {
         res.status(500).send({ message: "Internal server error" });
       }
     });
+
+
+
+    // insert toy
+    app.post('/all-toys', async(req, res) =>{
+      const newToy = req.body
+      const result = await allToysCollection.insertOne(newToy)
+      res.send(result)
+    } )
    
 
     await client.db("admin").command({ ping: 1 });
