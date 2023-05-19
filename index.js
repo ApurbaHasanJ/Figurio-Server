@@ -31,7 +31,7 @@ async function run() {
     const shopByCategoryCollection = client
       .db("Figurio")
       .collection("shopByCategory");
-      const allToysCollection = client.db("Figurio").collection('allToys');
+    const allToysCollection = client.db("Figurio").collection("allToys");
 
     // get banners for homepage
     app.get("/banners", async (req, res) => {
@@ -63,8 +63,8 @@ async function run() {
       res.send(result);
     });
 
-     // get specific toy details
-     app.get("/categories/:categoryId/toys", async (req, res) => {
+    // get specific toy details
+    app.get("/categories/:categoryId/toys", async (req, res) => {
       const categoryId = req.params.categoryId;
 
       try {
@@ -106,15 +106,19 @@ async function run() {
       }
     });
 
-
-
     // insert toy
-    app.post('/all-toys', async(req, res) =>{
-      const newToy = req.body
-      const result = await allToysCollection.insertOne(newToy)
-      res.send(result)
-    } )
-   
+    app.post("/all-toys", async (req, res) => {
+      const newToy = req.body;
+      const result = await allToysCollection.insertOne(newToy);
+      res.send(result);
+    });
+
+    // get all toy
+    app.get("/all-Toys", async (req, res) => {
+      const cursor = allToysCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
 
     await client.db("admin").command({ ping: 1 });
     console.log(
