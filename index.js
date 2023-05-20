@@ -33,6 +33,27 @@ async function run() {
       .collection("shopByCategory");
     const allToysCollection = client.db("Figurio").collection("allToys");
 
+
+    // creating index on fields
+    const indexKeys = {toyName: 1, toySubCategory: 1,}
+    const indexOptions = {name: 'toysSearch',}
+
+    const result = await allToysCollection.createIndex(indexKeys, indexOptions)
+
+    app.get('/toysSearch/:text', async (req, res) => {
+      const searchText = req.params.text;
+      const result = await allToysCollection.find({
+        $or:[
+          {toyName: {$regex: searchText, $options: 'i'}},
+          {toySubCategory: {$regex: searchText, $options: 'i'}}
+        ]
+      }).toArray()
+      res.send(result)
+
+    })
+
+
+
     // get banners for homepage
     app.get("/banners", async (req, res) => {
       const cursor = bannersCollection.find();
