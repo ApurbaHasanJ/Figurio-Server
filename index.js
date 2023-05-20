@@ -115,10 +115,10 @@ async function run() {
 
     // get all toy
     app.get("/all-Toys", async (req, res) => {
-      const cursor = allToysCollection.find();
+      const cursor = allToysCollection.find().limit(20);
       const result = await cursor.toArray();
       res.send(result);
-    });
+    });    
 
     // creating index on fields
     const indexKeys = { toyName: 1, toySubCategory: 1 };
@@ -157,6 +157,22 @@ async function run() {
       const result = await allToysCollection.deleteOne(query)
       res.send(result)
     })
+
+// update toy info
+app.put('/my-toy/:id', async (req, res) => {
+  const id = req.params.id
+  const body = req.body;
+  const filter = {_id: new ObjectId(id)}
+  const updateDoc = {
+    $set: {
+      toyPrice: body.toyPrice,
+      toyQuantity: body.toyQuantity,
+      toyDetails: body.toyDetails
+    }
+  }
+  const result = await allToysCollection.updateOne(filter, updateDoc)
+  res.send(result)
+})
 
     await client.db("admin").command({ ping: 1 });
     console.log(
