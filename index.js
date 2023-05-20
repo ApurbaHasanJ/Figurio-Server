@@ -118,7 +118,15 @@ async function run() {
       const cursor = allToysCollection.find().limit(20);
       const result = await cursor.toArray();
       res.send(result);
-    });    
+    }); 
+    
+    // Latest Products
+    app.get("/latest-toys", async (req, res) => {
+      const cursor = allToysCollection.find().sort({ _id: -1 }).limit(10);
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+    
 
     // creating index on fields
     const indexKeys = { toyName: 1, toySubCategory: 1 };
