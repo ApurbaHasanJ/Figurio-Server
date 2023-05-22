@@ -31,10 +31,11 @@ Welcome to the Action Figure Toys website! This platform is dedicated to providi
 ---
 
 - React
-- Tailwind CSS (CSS framework)
-- Flow bite (CSS Framework)
 - Firebase (user authentication)
 - MongoDB (databage)
+- Tailwind CSS (CSS framework)
+- DaisyUI (CSS Framework)
+
 
 ## Getting Started
 ---
