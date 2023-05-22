@@ -45,4 +45,4 @@ Welcome to the Action Figure Toys website! This platform is dedicated to providi
 ---
 
 ## Contact Us
-If you have any questions, feedback, or inquiries, please don't hesitate to reach out to us. We value your input and are here to assist you. Contact our support team at [Email](apurbahasanj@gmail.com) or visit our website's contact page for more information.
+If you have any questions, feedback, or inquiries, please don't hesitate to reach out to us. We value your input and are here to assist you. Contact our support team at [apurbahasanj@gmail.com] or visit our website's contact page for more information.
